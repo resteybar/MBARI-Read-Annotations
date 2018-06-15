@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<annotation verified="no">
+	<folder>MBARI_BENTHIC_2017</folder>
+	<filename>D008_03HD_00-08-45.png</filename>
+	<source>
+		<image>ROV Dive D008_03HD</image>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>960</width>
+		<height>540</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+</annotation>

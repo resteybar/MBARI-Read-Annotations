@@ -17,7 +17,7 @@
 using namespace std;
 
 // This function have access to a directory and store the file names "v" passed as argument.
-void read_directory(vector<string>& v);
+void read_directory(vector<string>& v, const string& folderName);
 
 // Sorts Files
 //  - Comparison Operator for sort()
@@ -25,7 +25,7 @@ bool leastToGreat(const string& a, const string& b);
 
 int main(){
     vector<string>filenames;
-    read_directory(filenames);
+    read_directory(filenames, "Annotations");
     
     sort(filenames.begin(), filenames.end(), leastToGreat);
     
@@ -38,9 +38,9 @@ int main(){
 }
 
 //This function have access to a directory and store the file names "v" passed as argument.
-void read_directory(vector<string>& v)
+void read_directory(vector<string>& v, const string& folderName)
 {
-    DIR* dirp = opendir("Annotations");
+    DIR* dirp = opendir(folderName);
     struct dirent * dp;
     // readdir() removes files from a directory or adds to a directory.
     while ((dp = readdir(dirp)) != NULL) {
